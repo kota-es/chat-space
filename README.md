@@ -56,8 +56,8 @@ Things you may want to cover:
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|add_index|
-|image|string|add_index|
+|body|text||
+|image|string||
 |group_id|integer|null: false, foreign_key:true|
 |user_id|integer|null: false, foreign_key:true|
 ### Association
