@@ -1,0 +1,5 @@
+@mixin column($height, $width, $float){
+  height: $height;
+  width: $width;
+  float: $float;
+}
