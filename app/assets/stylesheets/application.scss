@@ -1,7 +1,13 @@
+// 上から順に読まれるので変数定義などは上、ファイルの記述は下におく！
+
 @import "./reset";
 @import "./variable";
 @import "./mixin";
 @import "font-awesome";
+@import "./user";
+@import "config/colors";
+@import "modules/flash";
+
 
 *{
   box-sizing: border-box;
