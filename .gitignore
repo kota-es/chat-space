@@ -17,3 +17,4 @@
 .byebug_history
 
 public/uploads/*
+app/views/devise/shared/.DS_Store
