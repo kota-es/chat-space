@@ -1,0 +1,105 @@
+.chat-main{
+  @include column(100vh,calc(100vw - 300px),right);
+}
+
+.main-header{
+  padding: 0 40px 0;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  justify-content: space-between; 
+  &__group{
+    &__name{
+      margin-top: 35px;
+      font-size: 20px;
+      color: #333333;
+    }
+    &__member{
+      margin-top: 15px;
+      font-size: 12px;
+      color: $light_gray;
+    }
+  }
+  &__group-edit{
+    height: $edit-btn-height;
+    line-height: $edit-btn-height;
+    margin-top: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: $light_blue;
+    border: 1px solid $light_blue;
+    cursor: pointer;
+  }
+}
+
+.main-view{
+  height: calc(100vh - #{$side-header-height} - #{$form-height});
+  padding: 46px 40px;
+  background: #fafafa;
+  overflow: scroll;
+}
+
+.message-box{
+  margin: 0;
+  padding-bottom: 40px;
+  &__title{
+    display: flex;
+    padding-bottom: 10px;
+    &__username{
+      font-size: 16px;
+      font-weight: bold;
+      color: $black;
+    }
+    &__time{
+      padding-left: 10px;
+      font-size: 12px;
+      color: $light_gray;
+    }
+  }
+  &__message{
+    font-size: 14px;
+    color: $black;
+  }
+}  
+
+.chat-main__form{
+  height: $form-height;
+  padding: 20px 40px;
+  background: #ddd;
+}
+
+.create-message{
+  display: flex;
+}
+
+.input-box{
+  width: 100%;
+  position: relative;
+  &__text{
+    height: 50px;
+    width: 100%;
+    padding: 0 40px 0 10px;
+    margin-right: 10px;
+    border-style: none;
+  }
+  &__image{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.3em;
+    cursor: pointer;
+  }
+}
+
+#datafile{
+  display: none;
+}
+
+.submit-btn{
+  height: 50px;
+  width: 100px;
+  padding: 0 30px;
+  margin-left: 15px; 
+  background-color: $light_blue;
+  color: $white;
+  cursor: pointer;
+}
