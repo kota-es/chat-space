@@ -3,62 +3,62 @@
   .chat-side
     .side-header
       .side-header__box
-        %p{class: "side-header__box__username"}seo
-        %ul{class: "side-header__box__menu"}
-          %li{class: "side_header__box__new-group"}
+        %p.side-header__box__username seo
+        %ul.side-header__box__menu
+          %li.side_header__box__new-group
             =link_to "" do
               = fa_icon 'edit'
-          %li{class: "side_header__box__edit-account"}
+          %li.side_header__box__edit-account
             =link_to "" do
               = fa_icon 'cog'
     .side-groups
       .group-box
-        %p{class: "group-box__name"}sample
-        %p{class: "group-box__latest-message"}Good bye world!
+        %p.group-box__name sample
+        %p.group-box__latest-message Good bye world!
   
   .chat-main
     .main-header
       .main-header__group
-        %p{class: "main-header__group__name"}sample
-        %p{class: "main-header__group__member"}Members: seo neko
+        %p.main-header__group__name sample
+        %p.main-header__group__member Members: seo neko
       .main-header__group-edit Edit
     .main-view
       .message-box
         .message-box__title
-          %p{class: "message-box__title__username"}test-user
-          %p{class: "message-box__title__time"}2019/09/26(Thu) 11:00:00
-        %p{class: "message-box__message"}こんにちは！
+          %p.message-box__title__username test-user
+          %p.message-box__title__time 2019/09/26(Thu) 11:00:00
+        %p.message-box__message こんにちは！
       .message-box
         .message-box__title
-          %p{class: "message-box__title__username"}test-user
-          %p{class: "message-box__title__time"}2019/09/26(Thu) 11:00:00
-        %p{class: "message-box__message"}こんにちは！
+          %p.message-box__title__username test-user
+          %p.message-box__title__time 2019/09/26(Thu) 11:00:00
+        %p.message-box__message こんにちは！
       .message-box
         .message-box__title
-          %p{class: "message-box__title__username"}test-user
-          %p{class: "message-box__title__time"}2019/09/26(Thu) 11:00:00
-        %p{class: "message-box__message"}こんにちは！
+          %p.message-box__title__username test-user
+          %p.message-box__title__time 2019/09/26(Thu) 11:00:00
+        %p.message-box__message こんにちは！
       .message-box
         .message-box__title
-          %p{class: "message-box__title__username"}test-user
-          %p{class: "message-box__title__time"}2019/09/26(Thu) 11:00:00
-        %p{class: "message-box__message"}こんにちは！
+          %p.message-box__title__username test-user
+          %p.message-box__title__time 2019/09/26(Thu) 11:00:00
+        %p.message-box__message こんにちは！
       .message-box
         .message-box__title
-          %p{class: "message-box__title__username"}test-user
-          %p{class: "message-box__title__time"}2019/09/26(Thu) 11:00:00
-        %p{class: "message-box__message"}こんにちは！
+          %p.message-box__title__username test-user
+          %p.message-box__title__time 2019/09/26(Thu) 11:00:00
+        %p.message-box__message こんにちは！
       .message-box
         .message-box__title
-          %p{class: "message-box__title__username"}test-user
-          %p{class: "message-box__title__time"}2019/09/26(Thu) 11:00:00
-        %p{class: "message-box__message"}こんにちは！
+          %p.message-box__title__username test-user
+          %p.message-box__title__time 2019/09/26(Thu) 11:00:00
+        %p.message-box__message こんにちは！
     .chat-main__form
-      %form{class: "create-message"}
+      %form.create-message
         .input-box
-          %input{class: "input-box__text", type: "text", placeholder: "type a message"}
+          %input.input-box__text{type: "text", placeholder: "type a message"}
           %label
-            %span{class: "input-box__image"}
+            %span.input-box__image
               = fa_icon 'image'
-            %input{id: "datafile", type: "file"}
-        %input{class: "submit-btn", type: "submit", value: "SEND"}
+            %input#datafile{type: "file"}
+        %input.submit-btn{type: "submit", value: "SEND"}
