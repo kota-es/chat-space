@@ -1,3 +1,8 @@
+a{
+  text-decoration: none;
+  color: white;
+}
+
 .chat-side{
   @include column(100vh,300px,left);
 }
@@ -22,7 +27,6 @@
       display: flex;
       li a{
         margin-left: 5px;
-        color: $white;
       }
     }
   }
@@ -38,11 +42,11 @@
   margin-bottom: 40px;
   color: $white;
   font-weight: bold;
-  &__name{
+    &__name{
     font-size: 15px;
-    padding-bottom: 5px;
   }
   &__latest-message{
+    padding-top: 5px;
     font-size: 11px;
   }
 }
