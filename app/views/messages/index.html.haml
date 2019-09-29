@@ -5,46 +5,22 @@
   .chat-main
     .main-header
       .main-header__group
-        %p.main-header__group__name sample
-        %p.main-header__group__member Members: seo neko
+        %p.main-header__group__name 
+          = @group.name
+        %p.main-header__group__member
+          Member：
+          - @group.users.each do |user|
+            =  user.name
       .main-header__group-edit Edit
     .main-view
-      .message-box
-        .message-box__title
-          %p.message-box__title__username test-user
-          %p.message-box__title__time 2019/09/26(Thu) 11:00:00
-        %p.message-box__message こんにちは！
-      .message-box
-        .message-box__title
-          %p.message-box__title__username test-user
-          %p.message-box__title__time 2019/09/26(Thu) 11:00:00
-        %p.message-box__message こんにちは！
-      .message-box
-        .message-box__title
-          %p.message-box__title__username test-user
-          %p.message-box__title__time 2019/09/26(Thu) 11:00:00
-        %p.message-box__message こんにちは！
-      .message-box
-        .message-box__title
-          %p.message-box__title__username test-user
-          %p.message-box__title__time 2019/09/26(Thu) 11:00:00
-        %p.message-box__message こんにちは！
-      .message-box
-        .message-box__title
-          %p.message-box__title__username test-user
-          %p.message-box__title__time 2019/09/26(Thu) 11:00:00
-        %p.message-box__message こんにちは！
-      .message-box
-        .message-box__title
-          %p.message-box__title__username test-user
-          %p.message-box__title__time 2019/09/26(Thu) 11:00:00
-        %p.message-box__message こんにちは！
+      = render @messages
+
+
     .chat-main__form
-      %form.create-message
+      = form_for [@group, @message], html: {class: 'create-message'} do |f|
         .input-box
-          %input.input-box__text{type: "text", placeholder: "type a message"}
-          %label
-            %span.input-box__image
-              = fa_icon 'image'
-            %input#datafile{type: "file"}
-        %input.submit-btn{type: "submit", value: "SEND"}
+          = f.text_field :content, class:'input-box__text', placeholder: 'type a message'
+          = f.label :image, for: 'datafile' do
+            = fa_icon 'picture-o', class: 'input-box__image'
+            = f.file_field :image, id: 'datafile'
+        = f.submit 'Send', class: 'submit-btn'
