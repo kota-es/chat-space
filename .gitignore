@@ -19,3 +19,4 @@
 public/uploads/*
 app/views/devise/shared/.DS_Store
 app/views/groups/.DS_Store
+public/images/*
