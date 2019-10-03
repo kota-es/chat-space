@@ -39,7 +39,7 @@ function ScrollToBottom(){
       $('.submit-btn').prop( 'disabled', false );
       var html = buildHTML(data);
       $('.main-view').append(html);      
-      $('.input-box__text').val("");      
+      $('#new_message')[0].reset();      
       ScrollToBottom();
     })
     .fail(function(){
