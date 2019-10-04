@@ -56,6 +56,7 @@ $(document).on('turbolinks:load', function(){
   });
 
   $("#user-search-result").on('click', ".chat-group-user__btn--add",function(){
+    $(this).parent().remove();
     var user_name = $(this).data("user-name");
     var user_id = $(this).data("user-id");
     AddUserToMemberList(user_name, user_id);
