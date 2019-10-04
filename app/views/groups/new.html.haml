@@ -24,5 +24,14 @@
   
     .chat-group-form__field
       .chat-group-form__field--left
+        %label.chat-group-form__label{for: "chat_group_チャットメンバー"} チャットメンバー
+      .chat-group-form__field--right
+        .chat-group-users
+          .chat-group-user
+            %p.chat-group-user__name
+              = current_user.name
+
+    .chat-group-form__field
+      .chat-group-form__field--left
       .chat-group-form__field--right
         = f.submit class: 'chat-group-form__action-btn'
