@@ -28,6 +28,7 @@
       .chat-group-form__field--right
         .chat-group-users
           .chat-group-user
+            %input{name: 'group[user_ids][]', type: 'hidden', value: current_user.id }
             %p.chat-group-user__name
               = current_user.name
 
