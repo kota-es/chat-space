@@ -60,6 +60,10 @@ $(document).on('turbolinks:load', function(){
     var user_name = $(this).data("user-name");
     var user_id = $(this).data("user-id");
     AddUserToMemberList(user_name, user_id);
-    
-  })
+  });
+
+  $(".chat-group-users").on('click', ".chat-group-user__btn--remove",function(){
+    $(this).parent().remove();
+  });
+
 });
