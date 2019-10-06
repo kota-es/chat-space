@@ -36,6 +36,7 @@ a{
   height: calc(100vh - #{$side-header-height});
   padding: 20px 20px 0;
   background: $side_blue_light;
+  overflow: scroll;
 }
 
 .group-box{
